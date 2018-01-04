@@ -2,7 +2,7 @@
 
 In the previous chapters we learned about Feathers [services](./services.md) and [hooks](./hooks.md) and created a messages service that works in NodeJS and the browser. We saw how Feathers automatically sends events but so far we didn't really create a web API that other people can use.
 
-This what Feathers transports do. A transport is a plugin that turns a Feathers application into a server that exposes our services through different protocols for other clients to use. Since a transport involves running a server it won't work in the browser but we wil learn later that there are complementary plugins for connecting to a Feathers server in a browser Feathers application.
+This is what Feathers transports do. A transport is a plugin that turns a Feathers application into a server that exposes our services through different protocols for other clients to use. Since a transport involves running a server it won't work in the browser but we wil learn later that there are complementary plugins for connecting to a Feathers server in a browser Feathers application.
 
 Currently Feathers officially has three transports:
 
@@ -14,7 +14,7 @@ In this chapter we will look at the HTTP REST transport and Feathers Express fra
 
 ## REST and services
 
-One of the goals of Feathers is make building [REST APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) easier since it is by far the most common protocol for web APIs. For example, we want to make a request like `GET /messages/1` and get a JSON response like `{ "id": 1, "text": "The first message" }`. You may already have noticed that the Feathers service methods and the HTTP methods like `GET`, `POST`, `PATCH` and `DELETE` are fairly complementary to each other:
+One of the goals of Feathers is to make building [REST APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) easier since it is by far the most common protocol for web APIs. For example, we want to make a request like `GET /messages/1` and get a JSON response like `{ "id": 1, "text": "The first message" }`. You may already have noticed that the Feathers service methods and the HTTP methods like `GET`, `POST`, `PATCH` and `DELETE` are fairly complementary to each other:
 
 | Service method  | HTTP method | Path        |
 |-----------------|-------------|-------------|
